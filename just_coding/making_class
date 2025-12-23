@@ -1,0 +1,16 @@
+class BOOK:
+    def __init__(self, title, author, pages, height, width, price, cover, genre, publisher, year):
+        self.title = title
+        self.author = author
+        self.pages = pages
+        self.height = height
+        self.width = width
+        self.price = price
+        self.cover = cover
+        self.genre = genre
+        self.publisher = publisher
+        self.year = year
+
+book = BOOK('harry potter and the sorcerer stone', 'J.K Rowling', 309, '20.3 cm', '13.3 cm', 12.99, 'hardcover', 'adventure', 'bloomsbury', 1997)
+print(f'the title is {book.title} by {book.author} there are {book.pages} pages the size is {book.height} and {book.width} its pricing at ${book.price}')
+print(f'its {book.cover} the genre is {book.genre} the publisher: {book.publisher} it was released at {book.year}')
