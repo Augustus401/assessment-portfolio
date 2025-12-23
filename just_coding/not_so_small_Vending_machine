@@ -1,3 +1,4 @@
+#I made a class for the Vending machine 
 class VENDINGMACHINE:
     def __init__(self):
         self.product = {
@@ -23,7 +24,8 @@ class VENDINGMACHINE:
             "E4": {"name": "ice coffee", "price": 5.0, "stock": 5}
         }
         self.balance = 0.0
-
+        
+#it will display the menu and the welcome
     def display_products(self):
         print("\n                                   welcome to                                           ")
         print("                       not so small Vending Machine Menu                                ")
@@ -34,6 +36,7 @@ class VENDINGMACHINE:
         print("---------------------------------------------------------------------------------------")
         print("---------------------------------------------------------------------------------------")
 
+#To give the amount of money
     def insert_money(self, amount):
         try:
             amount = float(amount)
@@ -45,7 +48,8 @@ class VENDINGMACHINE:
         except ValueError:
             print("Invalid amount")
 
-    def select_product_cash(self, product_code):
+#To make the user to select the product they want
+    def select_product(self, product_code):
         product_code = product_code.upper()
         if product_code in self.product:
             product = self.product[product_code]
@@ -73,7 +77,7 @@ class VENDINGMACHINE:
         else:
             print("No change.")
 
-
+#to run the program
 def main():
     vm = VENDINGMACHINE()
     while True:
@@ -88,7 +92,7 @@ def main():
                 amount = input("insert amount of cash: ")
                 vm.insert_money(amount)
                 print("---------------------------------------------------------------------------------------")
-                vm.select_product_cash(code)
+                vm.select_product(code)
                 vm.return_change()
                 print("and Thank you for using the not so small vending machine")
                 print("---------------------------------------------------------------------------------------")
@@ -99,7 +103,7 @@ def main():
                     amount = input("insert amount the amount: ")
                     vm.insert_money(amount)
                     print("---------------------------------------------------------------------------------------")
-                    vm.select_product_cash(code)
+                    vm.select_product(code)
                     vm.return_change()
                     print("and Thank you for using the not so small vending machine")
                     print("---------------------------------------------------------------------------------------")
