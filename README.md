@@ -1,2 +1,2 @@
 # assessment-portfolio
-all of my coding in a portfolio
+all of the coding in a portfolio
